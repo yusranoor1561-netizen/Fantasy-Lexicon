@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fantasy Lexicon</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<header>
+    <h1>📖 Fantasy Lexicon</h1>
+    <p>Explore Magical Words • Kingdoms • Lore • Creatures</p>
+</header>
+
+<nav>
+    <button onclick="browseWords()">Browse Dictionary</button>
+    <button onclick="randomWord()">Random Word</button>
+    <button onclick="wordOfDay()">Word of the Day</button>
+</nav>
+
+<section class="search">
+    <h2>Search a Word</h2>
+
+    <input
+        type="text"
+        id="searchInput"
+        placeholder="Enter fantasy word">
+
+    <button onclick="searchWord()">Search</button>
+</section>
+
+<section id="result" class="card">
+    <button class="close-btn" onclick="closeResult()" style="display:none;">✕</button>
+    <div id="resultContent">
+        <h2>Word Information</h2>
+        <p>Search a word to begin.</p>
+    </div>
+</section>
+
+<section class="games">
+    <h2>Games</h2>
+
+    <div class="grid">
+
+        <div class="game">
+            <h3>Flashcards</h3>
+            <p>Learn fantasy vocabulary using interactive flashcards.</p>
+            <button onclick="flashcards()">Start</button>
+        </div>
+
+        <div class="game">
+            <h3>Guess the Word</h3>
+            <p>Guess the correct fantasy word from its meaning.</p>
+            <button onclick="guessWord()">Play</button>
+        </div>
+
+        <div class="game">
+            <h3>MCQ Quiz</h3>
+            <p>Choose the correct fantasy word.</p>
+            <button onclick="mcqQuiz()">Start Quiz</button>
+        </div>
+
+    </div>
+</section>
+
+<section id="gameArea">
+    <button class="close-btn" onclick="closeGameArea()" style="display:none;">✕</button>
+    <div id="gameContent"></div>
+</section>
+
+<footer>
+    <p>Fantasy Lexicon © 2026</p>
+</footer>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>

@@ -1,0 +1,277 @@
+/* ===============================
+        FANTASY LEXICON
+================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Georgia, serif;
+}
+
+body {
+    background-color:#0d0f1a;
+    position:relative;
+}
+
+body::before{
+
+    content:"";
+    position:fixed;
+    inset:0;
+    background-image:url('background.png');
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+    filter:brightness(1.4);
+    z-index:-1;
+
+}
+
+header{
+
+    background:linear-gradient(90deg,#2c3e50,#4b0082);
+    padding:30px;
+    text-align:center;
+    box-shadow:0 0 15px black;
+
+}
+
+header h1{
+
+    font-size:40px;
+    color:gold;
+
+}
+
+header p{
+
+    margin-top:10px;
+    color:#dddddd;
+
+}
+
+/* Navigation */
+
+nav{
+
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    padding:20px;
+    flex-wrap:wrap;
+
+}
+
+button{
+
+    background:gold;
+    color:#2A1B3D;
+    border:none;
+    padding:12px 22px;
+    font-size:16px;
+    border-radius:8px;
+    cursor:pointer;
+    transition:.3s;
+
+}
+
+button:hover{
+
+    background:#ffdd44;
+    transform:scale(1.05);
+
+}
+
+/* Search */
+
+.search{
+
+    width:80%;
+    margin:auto;
+    text-align:center;
+    padding:25px;
+
+}
+
+.search h2{
+
+    margin-bottom:15px;
+    color:#f3edfa;
+
+}
+
+input{
+
+    width:60%;
+    padding:12px;
+    border-radius:8px;
+    border:none;
+    font-size:16px;
+
+}
+
+.search button{
+
+    margin-left:10px;
+
+}
+
+/* Result Card */
+
+.card{
+
+    width:80%;
+    margin:25px auto;
+    background:#8A6FB0;
+    color:#2A1B3D;
+    padding:25px;
+    border-radius:12px;
+    box-shadow:0 0 10px black;
+    position:relative;
+
+}
+
+.card h2{
+
+    color:gold;
+    margin-bottom:15px;
+
+}
+
+/* Games */
+
+.games{
+
+    width:90%;
+    margin:auto;
+    padding:20px;
+
+}
+
+.games h2{
+
+    text-align:center;
+    margin-bottom:25px;
+    color:#f3edfa;
+
+}
+
+.grid{
+
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+
+}
+
+.game{
+
+    background:#8A6FB0;
+    color:#2A1B3D;
+    border-radius:12px;
+    padding:20px;
+    text-align:center;
+    box-shadow:0 0 12px black;
+
+}
+
+.game h3{
+
+    color:gold;
+    margin-bottom:15px;
+
+}
+
+.game p{
+
+    margin-bottom:20px;
+    line-height:1.5;
+
+}
+
+#result, #gameArea{
+
+    position:relative;
+    overflow:hidden;
+    width:85%;
+    margin:30px auto;
+    background:#8A6FB0;
+    color:#2A1B3D;
+    padding:45px 20px 20px 20px; /* extra top padding so content doesn't sit under the button */
+    border-radius:10px;
+
+}
+
+.close-btn{
+
+    position:absolute;
+    top:10px;
+    right:10px;
+    left:auto;
+    background:gold;
+    color:#2A1B3D;
+    border:none;
+    border-radius:50%;
+    width:28px;
+    height:28px;
+    padding:0;
+    font-weight:bold;
+    font-size:14px;
+    line-height:1;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    cursor:pointer;
+    z-index:10;
+
+}
+.close-btn:hover{
+
+    background:#ffdd44;
+    transform:scale(1.05);
+
+}
+
+.word{
+
+    margin-bottom:20px;
+    border-bottom:1px solid #2A1B3D;
+    padding-bottom:15px;
+
+}
+
+.word h3{
+
+    color:gold;
+
+}
+
+footer{
+
+    text-align:center;
+    padding:25px;
+    margin-top:40px;
+    background:#8A6FB0;
+    color:#2A1B3D;
+
+}
+
+/* Mobile */
+
+@media(max-width:768px){
+
+    input{
+
+        width:100%;
+        margin-bottom:10px;
+
+    }
+
+    .search button{
+
+        margin-left:0;
+
+    }
+
+}
