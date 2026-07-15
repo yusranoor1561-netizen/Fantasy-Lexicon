@@ -10,7 +10,7 @@
 }
 
 body {
-    background-color:#0d0f1a;
+    background-color:gold;
     position:relative;
 }
 
@@ -97,7 +97,7 @@ button:hover{
 .search h2{
 
     margin-bottom:15px;
-    color:black;
+    color:gold
 
 }
 
