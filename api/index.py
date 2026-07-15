@@ -6,10 +6,6 @@ import os
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
-import os
-from flask import Flask
-
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
 app = Flask(
     __name__,
